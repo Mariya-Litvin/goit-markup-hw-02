@@ -6,8 +6,9 @@
   --main-color-dark: #000000;
   --hover-focus-color: #188ce8;
   --background-color-dark: #2f303a;
-  --background-color-white: #f5f5f5;
   --background-color-team: #f5f4fa;
+  --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --portfolio-cards-border: #eeeeee;
 }
 
 .list {
@@ -23,13 +24,14 @@ button {
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
-  background: var(--background-color-white);
+  background: var(--main-color-light);
+  color: var(--accent-color-one);
 }
 
 /* Header */
 
 .logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -37,11 +39,11 @@ body {
 }
 
 .logo-black {
-  color: #000000;
+  color: var(--main-color-dark);
 }
 
 .logo-white {
-  color: #ffffff;
+  color: var(--main-color-light);
 }
 
 .nav-item {
@@ -57,7 +59,7 @@ body {
   color: var(--accent-color-two);
 }
 
-.current {
+.nav .current {
   color: var(--accent-color-two);
 }
 
@@ -66,7 +68,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--secondary-color-font);
 }
 
 .contacts-item:hover,
@@ -105,6 +107,8 @@ body {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--hover-focus-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -125,11 +129,9 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--accent-color-one);
 }
 
 .advantages-text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-color-font);
@@ -141,7 +143,6 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  color: var(--accent-color-one);
 }
 
 .team {
@@ -153,16 +154,22 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: var(--accent-color-one);
 }
 
 .team-position {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-color-font);
 }
+
+.team-card-item {
+  background: var(--main-color-light);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 /* Footer */
 
 .footer {
@@ -181,7 +188,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-contact-color);
   font-style: normal;
 }
 .footer-address:hover,
@@ -207,6 +214,9 @@ body {
 .filter-button:focus {
   color: var(--main-color-light);
   background-color: var(--accent-color-two);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .filter-title {
@@ -218,8 +228,17 @@ body {
 }
 
 .filter-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-color-font);
+}
+
+.filter-result {
+  background: var(--main-color-light);
+  border: 1px solid var(--portfolio-cards-border);
+}
+
+.filter-result-link:hover,
+.filter-result-link:focus {
+  background: var(--accent-color-two);
 }
